@@ -27,10 +27,10 @@
     "express": "^4.18.1",
     "file-saver": "^2.0.5",
     "mongodb": "^4.9.1",
-    "nodemon": "^2.0.19",
+    "nodemon": "^3.0.0",
     "typescript": "^4.8.3"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^3.0.0"
   }
 }
