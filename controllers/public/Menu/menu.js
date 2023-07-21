@@ -1406,18 +1406,26 @@ function errorMessage(message,color){
     })
     
 }
-
-let postUrl
-let production = 'dev'
+production = 'dev'
 let uhhh = "https://coffee-trainer.herokuapp.com/menu"
-function dynamicURL(word){
-    let loc = window.location.href.includes('coffee')
-    if(loc){
-        production='live'
-    }else{
-        production='dev'
-    }
-    
+
+function dynamicURL(word) {
+  let loc = window.location.href.includes('coffee')
+  if (loc) {
+    production = 'live'
+  } else {
+    production = 'dev'
+  }
+}
+
+dynamicURL()
+
+if (production === 'dev') {
+  // Code for development environment
+} else if (production === 'live') {
+  // Code for live/production environment
+}
+ 
 }
 dynamicURL()
 if(production === 'dev'){
