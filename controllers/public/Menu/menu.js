@@ -657,7 +657,7 @@ function addTheIcedWord(){
 
 
 let heroku = 'https://coffee-trainer.herokuapp.com/api/coredrinks'
-let local = 'https://starbuckspos.onrender.com/api/coredrinks'
+let local = 'https://poswalshe.vercel.app/api/coredrinks'
 
 const statusLight = document.querySelector('.statusLight')
 async function apiRequest(url){  //Calls the API and brings drink data to the 
@@ -705,7 +705,7 @@ function shuffle(array) {
 
 async function allcustom(){
     try{
-        const response = await fetch('https://starbuckspos.onrender.com/api/allnames')
+        const response = await fetch('https://poswalshe.vercel.app/api/allnames')
         const data = await response.json()
         console.log(data)
     }
@@ -1429,13 +1429,13 @@ if (production === 'dev') {
 }
 dynamicURL()
 if(production === 'dev'){
-    localStorage.setItem('LastClicked',["https://starbuckspos.onrender.com/api/customizations",local,'https://starbuckspos.onrender.com/api/customers','https://localhost:8000/order'])
+    localStorage.setItem('LastClicked',["https://poswalshe.vercel.app/api/customizations",local,'https://poswalshe.vercel.app/api/customers','https://localhost:8000/order'])
     removeAllChildNodes(document.querySelector('.items'))
     removeAllChildNodes(document.querySelector('.drinkType'))
-    apiRequestForCustomizations("https://starbuckspos.onrender.com/api/customizations")
+    apiRequestForCustomizations("https://poswalshe.vercel.app/api/customizations")
     apiRequest(local)
-    apiRequestCustomer('https://starbuckspos.onrender.com/api/customers')
-    postUrl ='https://starbuckspos.onrender.com/order'
+    apiRequestCustomer('https://poswalshe.vercel.app/api/customers')
+    postUrl ='https://poswalshe.vercel.app/order'
 }else
 if(production=== 'live'){
     localStorage.setItem('LastClicked',["https://coffee-trainer.herokuapp.com/api/customizations",heroku,"https://coffee-trainer.herokuapp.com/api/customers,'https://coffee-trainer.herokuapp.com/order'"])
